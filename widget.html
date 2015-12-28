@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <title>Widget / Machine Vision</title>
+
+    <!-- ChiliPeppr is based on bootstrap CSS. -->
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+    <!-- Customized version of require.js for ChiliPeppr. Please see require.js docs for how
+    ChiliPeppr's dependency system works as it's based on require.js. -->
+    <script type='text/javascript' src="//i2dcui.appspot.com/js/require.js"></script>
+
+    <!-- widget.css DON'T REMOVE -->
+    <style type='text/css'>
+        /* widget.css will get inlined here by runme.js. don't remove this comment or inlining will fail. */
+    </style>
+    <link rel="stylesheet" type="text/css" href="widget.css">
+    <!-- DON'T REMOVE end widget.css -->
+
+    <!-- widget.js DON'T REMOVE -->
+    <script type='text/javascript'>
+        //<![CDATA[
+        /* widget.js will get inlined here by runme.js. don't remove this comment or inlining will fail. */
+        //]]>
+    </script>
+    <script type='text/javascript' src="widget.js"></script>
+    <!-- DON'T REMOVE end widget.js -->
+
+</head>
+
+<body>
+<div id="org-calibrate-widget" class="panel panel-default">
+    <div class="panel-heading">
+        <span class="panel-title" data-toggle="popover">Calibrate</span>
+
+        <div class="btn-group pull-right" style="margin-right:0;">
+            <div class="dropdown">
+                <button type="button" class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                <ul class="dropdown-menu" role="menu"></ul>
+            </div>
+        </div>
+        
+        <div class="btn-group pull-right" style="margin-right:6px;">
+            <a href="#" class="btn btn-xs btn-default calibrate-display-probe" data-container="body" data-toggle="popover" data-placement="auto" data-content="Display probe" data-trigger="hover" data-delay="800"><span class="glyphicon glyphicon-play"></span></a>
+        </div>
+
+        <div class="btn-group pull-right" style="margin-right:6px;">
+            <a href="#" class="btn btn-xs btn-default calibrate-run" data-container="body" data-toggle="popover" data-placement="auto" data-content="Start calibrate process" data-trigger="hover" data-delay="800"><span class="glyphicon glyphicon-screenshot"></span> Calibrate</a>
+        </div>
+    </div>
+    <div id="org-calibrate-widget-body" class="panel-body">
+ 
+        <div class="alert alert-warning hidden"></div>
+
+        <div class="org-calibrate-widget-stat">
+           <table class="table table-condensed">
+             <thead>
+               <tr>
+                 <th>Width (mm)</th>
+                 <th>Height (mm)</th>
+               </tr>
+             </thead>
+             <tbody>
+               <tr>
+                 <td><span id="org-calibrate-widget-probeWidth" class="stat-val stat-object">0.000</span></td>
+                 <td><span id="org-calibrate-widget-probeHeight" class="stat-val stat-object">0.000</span></td>
+               </tr>
+               <tr>
+                 <td><span id="org-calibrate-widget-probeWidth-result" class="stat-val stat-object">0.000 steps/mm</span></td>
+                 <td><span id="org-calibrate-widget-probeHeight-result" class="stat-val stat-object">0.000 steps/mm</span></td>
+               </tr>
+             </tbody>
+           </table>
+
+            <label for="inputdefault">With or Outsidediameter of your Probe.</label>
+            <div class="input-group">
+                <input class="form-control input-sm probeOD" type="number" value="25" xdisabled />
+                <div class="input-group-addon">mm</div>
+            </div>
+
+            <label for="inputdefault">Height of your Probe. (zero if circle probe)</label>
+            <div class="input-group">
+                <input class="form-control input-sm probeHOD" type="number" value="0" xdisabled />
+                <div class="input-group-addon">mm</div>
+            </div>
+
+            <label for="inputdefault">Outsidediameter of Endmill shaft</label>
+            <div class="input-group">
+                <input class="form-control input-sm emillOD" type="number" value="3.175" xdisabled />
+                <div class="input-group-addon">mm</div>
+            </div>
+
+            <label for="inputdefault">Please input the depth of z-axis to measure the sides.</label>
+            <div class="input-group">
+              <input class="form-control input-sm zdeep" type="number" value="-0.5" xdisabled />
+              <div class="input-group-addon">mm</div>
+            </div>
+
+           <ul class="list-group">
+            <li class="list-group-item">Please use a circle metal piece(washer or touch plate) and measure that Outside-diameter.</li>
+            <li class="list-group-item">Input that value in the input field.</li>
+            <li class="list-group-item">Put this ring stable on you cnc workarea.</li>
+            <li class="list-group-item">Move the spindle to center of ring.</li>
+            <li class="list-group-item">Aktivate the 'Calibrate' Button to run the magic :)</li> 
+           </ul>
+   </div>
+
+    <div id="org-calibrate-widget-ftr" class="panel-footer hidden"></div>
+</div>
+</body>
+
+</html>

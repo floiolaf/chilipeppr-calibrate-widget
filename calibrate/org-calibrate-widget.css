@@ -1,0 +1,47 @@
+.lastModifyDate {
+    color: silver;
+}
+#org-calibrate-widget-body {
+    max-height:300px;
+    overflow:auto;
+}
+
+.org-calibrate-widget-stat .stat-row {
+    padding-top:2px;
+}
+#org-calibrate-widget .org-calibrate-widget-stat div.col.lblpad {
+    padding-left:10px;
+}
+.org-calibrate-widget-stat  .stat-unit {
+    font-size:9px;
+    /* display:none; */
+}
+.org-calibrate-widget-stat  div.col.well {
+    margin-bottom:0px;
+    padding-left:5px;
+}
+.org-calibrate-widget-stat  .stat-sm {
+    font-size:10px;
+}
+
+#org-calibrate-widget .panel-footer {
+    font-size:11px;
+    padding:0;
+    margin:0;
+}
+#org-calibrate-widget-status {
+    background:none;
+    background-color:#f5f5f5;
+    border:none;
+}
+#org-calibrate-widget .col-xs-3 {
+    padding:0;
+    margin:0;
+}
+#org-calibrate-widget .progress-bar span {
+    color: black;
+    padding-left:4px;
+}
+#org-calibrate-widget .stat-val {
+    padding-left:4px;
+}
